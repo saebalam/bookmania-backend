@@ -1,0 +1,95 @@
+
+const redux = require('redux')
+const reduxLogger = require('redux-logger')
+const thunkMiddleware = require('redux-thunk').default
+const axios = require('axios')
+
+const createStore = redux.legacy_createStore
+const applyMiddleware = redux.applyMiddleware
+const logger = reduxLogger.createLogger()
+
+const addCake = () => {
+    return {
+        type: 'add',
+        payload: 1
+    }
+}
+const addIceCream = () => {
+    return {
+        type: 'add',
+        payload: 1
+    }
+}
+const fetchUserAction = (user) => {
+    return {
+        type: "fetchUser",
+        payload: user
+    }
+}
+
+
+const userState = {
+    user: []
+}
+
+const cakeState = {
+    counter: 10
+}
+
+const iceCreamState = {
+    counter: 20
+}
+
+const cakeReducer = (state = cakeState, action) => {
+    switch (action.type) {
+        case ("add"): return {
+            ...state,
+            counter: action.payload
+        }
+        default:
+            return state
+        }
+    }
+    
+    const reducer = (state = userState, action) => {
+        switch (action.type) {
+            case "fetchUser": return {
+                
+                user: action.payload
+            }
+            default: return state
+        }
+    }
+
+const iceCreamReducer = (state = iceCreamState, action) => {
+    switch (action.type) {
+        case ("add"): return {
+            ...state,
+            counter: state.counter + action.payload
+        }
+        default:
+            return state
+    }
+}
+
+const fetchUser = () => {
+
+    return function (dispatch) {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                const user = res.data.map(user => user.id)
+                // console.log(user);
+                dispatch(fetchUserAction(user))
+            })
+    }
+}
+
+const rootReducer = redux.combineReducers({
+    cake: cakeReducer,
+    iceCream: iceCreamReducer
+})
+
+const store = createStore(reducer, applyMiddleware(thunkMiddleware));
+console.log("init", store.getState());
+store.subscribe(() => { console.log("init",store.getState())})
+store.dispatch(fetchUser())
