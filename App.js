@@ -121,7 +121,7 @@ app.get('/user/featuredProducts', (req, res) => {
 app.post('/products/:query', (req, res) => {
     const query = req.params.query
     filteredProducts = Products.filter(product => product.category.toLowerCase().includes(query.toLowerCase()) || query.toLowerCase().includes(product.category.toLowerCase()))
-    const filteredProductsTitle = filteredProducts.map(filteredProduct => filteredProduct.title)
+    const filteredProductsTitle = filteredProducts.map(filteredProduct => filteredProduct.category)
     if (filteredProductsTitle.length > 0) {
         res.send(filteredProductsTitle)
     } else {
@@ -145,6 +145,21 @@ app.get(`/collections/:pName`, (req, res) => {
     }
 })
 
+app.get(`/products/:productName`, (req, res) => {
+    // res.send("productList")
+    console.log('coll called');
+    const query = req.params.productName
+
+    filteredProductsList = Products.filter(product => product.category.toLowerCase().includes(query.toLowerCase()) || query.toLowerCase().includes(product.category.toLowerCase()))
+    // const filteredProductsTitle=filteredProducts.map(filteredProduct=>filteredProduct.title)
+    if (filteredProductsList.length > 0) {
+        // console.log(filteredProductsList);
+        res.send(filteredProductsList)
+    } else {
+        res.status(200)
+        res.end()
+    } 
+})
 
 //cart
 app.post('/cart', validateToken, (req, res) => {

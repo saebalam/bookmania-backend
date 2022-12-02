@@ -4,39 +4,39 @@ const Products=[
         title:"Lenovo",
         src:'https://unsplash.com/photos/Px0X7g1mc8k',
         rating:4,
-        price:"250",
-        category:'laptop lenovo'
+        price:250,
+        category:'laptop'
     },
     {
         id:2,
         title:"bedsheet",
         src:'https://images.pexels.com/photos/14504613/pexels-photo-14504613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         rating:5,
-        price:"270",
+        price:270,
         category:'bedsheets'
     },
-    {
-        id:3,
+    { 
+        id:3, 
         title:"Programming",
         src:'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3xlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60',
         rating:3,
-        price:"270",
-        category:'book programming'
+        price:270,
+        category:'book'
     },
     {
         id:4,
         title:"onePlus",
         src:'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         rating:5,
-        price:"2100",
-        category:'phone mobile onePlus'
+        price:100,
+        category:'mobile'
     },
     {
         id:5,
         title:"Tshirt",
         src:'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2hpcnR8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         rating:3,
-        price:"280",
+        price:280,
         category:'tshirt '
     },
     {
@@ -44,8 +44,8 @@ const Products=[
         title:"Hero",
         src:'https://images.unsplash.com/photo-1575734124434-aeabcbd508b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJpa2V8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         rating:4,
-        price:"290",
-        category:'cycle,jeans'
+        price:290,
+        category:'cycle'
     },
     {
         id:7,
@@ -53,7 +53,7 @@ const Products=[
         src:'https://images.unsplash.com/photo-1616628188550-808682f3926d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29weXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60',
         rating:4.5,
         price:"300",
-        category:'shoes,jeans'
+        category:'shoes'
     },
     {
         id:8,
@@ -68,15 +68,15 @@ const Products=[
         title:"Ikigai",
         src:'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         rating:4,
-        price:"2100",
-        category:'book,jeans'
+        price:2100,
+        category:'book'
     },
     {
         id:10,
         title:"Ikigai",
         src:'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2hpcnR8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         rating:5,
-        price:"280",
+        price:280,
         category:'book'
     },
     {
@@ -84,15 +84,15 @@ const Products=[
         title:"Nike",
         src:'https://images.unsplash.com/photo-1575734124434-aeabcbd508b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJpa2V8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         rating:3,
-        price:"290",
-        category:'shoe shoes'
+        price:290,
+        category:'shoes'
     },
     {
         id:12,
         title:"Abc",
         src:'https://images.unsplash.com/photo-1616628188550-808682f3926d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29weXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60',
         rating:2,
-        price:"300",
+        price:200,
         category:'book'
     },
     {
@@ -100,7 +100,7 @@ const Products=[
         title:"Java",
         src:'https://images.unsplash.com/photo-1617331721459-175bc38d2950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29weXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60',
         rating:4,
-        price:"301",
+        price:301,
         category:'book'
     },
     {
@@ -108,7 +108,7 @@ const Products=[
         title:"bedsheet-silk",
         src:'https://images.unsplash.com/photo-1524464790303-b7f467781d29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
         rating:5,
-        price:"290",
+        price:290,
         category:'bedsheets'  
     },
 ]

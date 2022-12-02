@@ -15,6 +15,6 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "start": "node App.js"
+    "start": "nodemon App.js"
   }
 }
